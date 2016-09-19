@@ -1,2 +1,93 @@
-h1 Insurances#show
-p Find me in app/views/insurances/show.html.slim
+.container.insurance
+  .m-t-1
+  ul.nav.nav-pills
+    li.nav-item
+      = link_to '5 Blessers', '#blessers', class: 'nav-link active', data: { toggle: 'tab' }
+    li.nav-item
+      = link_to 'Details', '#details', class: 'nav-link', data: { toggle: 'tab' }
+
+  .m-b-1
+
+  .tab-content
+    #blessers.tab-pane.active
+      hr
+      .line.blesser
+        = image_tag 'a1.jpg', class: 'img-circle'
+        | Dumitru Scott
+      hr
+      .line.blesser
+        = image_tag 'a2.jpg', class: 'img-circle'
+        | Uzoma Valentin
+      hr
+      .line.blesser
+        = image_tag 'a3.jpg', class: 'img-circle'
+        | Cord Gaizka
+      hr
+      .line.blesser
+        = image_tag 'a4.jpg', class: 'img-circle'
+        | Muiris Gladwin
+      hr
+      .line.blesser
+        = image_tag 'a5.jpg', class: 'img-circle'
+        | Ganesha Daniel
+      hr
+    #details.tab-pane
+      .form-group
+        label.control-label Location
+        input.form-control
+      .form-group
+        label.control-label Period
+        .row
+          .col-xs-6
+            input.form-control placeholder="From" type="date"
+          .col-xs-6
+            input.form-control placeholder="To" type="date"
+
+      hr
+      | This travel insurance for independent travellers. Please take some time to pick the items you want to cover:
+      hr
+      .row
+        .col-xs-9
+          strong Medial Help (+$100)
+          br
+          small.text-muted Up to $30,000 for sudden illness/injury
+        .col-xs-3
+          .switcher-wrapper
+            input.switch type="checkbox"
+      hr
+      .row
+        .col-xs-9
+          strong Delay Flight (+$50)
+          br
+          small.text-muted Covers $500 for every 2 hours delay
+        .col-xs-3
+          .switcher-wrapper
+            input.switch type="checkbox"
+      hr
+      .row
+        .col-xs-9
+          strong Cancel Your Trip (+$30)
+          br
+          small.text-muted Covers the costs to cancel all of your trip
+        .col-xs-3
+          .switcher-wrapper
+            input.switch type="checkbox"
+      hr
+      .row
+        .col-xs-9
+          strong Gear Stolen (+$80)
+          br
+          small.text-muted Cover theft or damage of your gear up to $30,000
+        .col-xs-3
+          .switcher-wrapper
+            input.switch type="checkbox"
+      hr
+
+  .bottom
+    .row
+      .col-xs-6
+        h2.m-b-0.total
+          span.text-success $20
+          | &nbsp;/&nbsp;$260
+      .col-xs-6.text-xs-right
+        = link_to 'Pay Remaining', pay_insurance_url, class: 'btn btn-success'

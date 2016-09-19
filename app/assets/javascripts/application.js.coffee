@@ -28,7 +28,7 @@ $(document).on 'turbolinks:load', ->
   $(".btn-pay").on 'click', (e) ->
     e.preventDefault()
     $(".backdrop").fadeIn('fast')
-    $(".apple-pay").animate({
+    $(".apple-pay").show().animate({
       bottom: 0
     }, 'fast')
 
