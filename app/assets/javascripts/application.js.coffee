@@ -32,6 +32,15 @@ $(document).on 'turbolinks:load', ->
       bottom: 0
     }, 'fast')
 
+  $(".btn-touch").on 'click', (e) ->
+    e.preventDefault()
+    $(".backdrop").fadeOut('fast')
+    $(".apple-pay").animate({
+      bottom: -350
+    }, 'fast')
+    $(".btn-pay").hide()
+    $(".thank").show()
+
   if $(".insurance").length > 0
     $(".insurance .policy").on 'change', (e) ->
       sum = 0
@@ -41,4 +50,3 @@ $(document).on 'turbolinks:load', ->
 
   $(".switch[data-switchery!=true]").each ->
     new Switchery(this)
-

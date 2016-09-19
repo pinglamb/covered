@@ -12,7 +12,10 @@
   p Bless Joey Tang with real support by funding her <strong>travel insurance</strong>.
   .container.slider-input
     input.slider data-slider-min="0" data-slider-max="50" data-slider-step="1" data-slider-value="20"
-  = link_to 'Bless You! Have a Safe Trip', '#', class: 'btn btn-lg btn-outline-primary btn-block btn-pay'
+  .action
+    = link_to 'Bless You! Have a Safe Trip', '#', class: 'btn btn-lg btn-outline-primary btn-block btn-pay'
+    h1.text-xs-center.thank style="display: none"
+      | :)
 
 .backdrop style="display: none"
 
@@ -68,7 +71,7 @@
         .total $20.00
   hr
   .container.line
-    .text-xs-center
+    = link_to '#', class: 'btn-touch text-xs-center'
       = image_tag 'touch-id.png', width: 80
       br
       span Pay with Touch ID
