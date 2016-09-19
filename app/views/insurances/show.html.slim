@@ -1,8 +1,13 @@
+- content_for :back_url, insurances_url(one_more: 1)
+
 .container.insurance
   .m-t-1
   ul.nav.nav-pills
     li.nav-item
-      = link_to '5 Blessers', '#blessers', class: 'nav-link active', data: { toggle: 'tab' }
+      - if params[:id] == '2'
+        = link_to '1 Blesser', '#blessers', class: 'nav-link active', data: { toggle: 'tab' }
+      - else
+        = link_to '5 Blessers', '#blessers', class: 'nav-link active', data: { toggle: 'tab' }
     li.nav-item
       = link_to 'Details', '#details', class: 'nav-link', data: { toggle: 'tab' }
 
@@ -15,33 +20,34 @@
         = image_tag 'a1.jpg', class: 'img-circle'
         | Dumitru Scott
       hr
-      .line.blesser
-        = image_tag 'a2.jpg', class: 'img-circle'
-        | Uzoma Valentin
-      hr
-      .line.blesser
-        = image_tag 'a3.jpg', class: 'img-circle'
-        | Cord Gaizka
-      hr
-      .line.blesser
-        = image_tag 'a4.jpg', class: 'img-circle'
-        | Muiris Gladwin
-      hr
-      .line.blesser
-        = image_tag 'a5.jpg', class: 'img-circle'
-        | Ganesha Daniel
-      hr
+      - unless params[:id] == '2'
+        .line.blesser
+          = image_tag 'a2.jpg', class: 'img-circle'
+          | Uzoma Valentin
+        hr
+        .line.blesser
+          = image_tag 'a3.jpg', class: 'img-circle'
+          | Cord Gaizka
+        hr
+        .line.blesser
+          = image_tag 'a4.jpg', class: 'img-circle'
+          | Muiris Gladwin
+        hr
+        .line.blesser
+          = image_tag 'a5.jpg', class: 'img-circle'
+          | Ganesha Daniel
+        hr
     #details.tab-pane
       .form-group
         label.control-label Location
-        input.form-control
+        input.form-control value="San Francisco"
       .form-group
         label.control-label Period
         .row
           .col-xs-6
-            input.form-control placeholder="From" type="date"
+            input.form-control placeholder="From" type="date" value="2016-09-28"
           .col-xs-6
-            input.form-control placeholder="To" type="date"
+            input.form-control placeholder="To" type="date" value="2016-10-09"
 
       hr
       | This travel insurance for independent travellers. Please take some time to pick the items you want to cover:
@@ -53,7 +59,7 @@
           small.text-muted Up to $30,000 for sudden illness/injury
         .col-xs-3
           .switcher-wrapper
-            input.switch type="checkbox"
+            input.switch type="checkbox" checked="checked"
       hr
       .row
         .col-xs-9
@@ -62,7 +68,7 @@
           small.text-muted Covers $500 for every 2 hours delay
         .col-xs-3
           .switcher-wrapper
-            input.switch type="checkbox"
+            input.switch type="checkbox" checked="checked"
       hr
       .row
         .col-xs-9
@@ -87,7 +93,12 @@
     .row
       .col-xs-6
         h2.m-b-0.total
-          span.text-success $20
-          | &nbsp;/&nbsp;$260
+          - if params[:id] == '2'
+            span.text-success $20
+            | &nbsp;/&nbsp;
+          | $260
       .col-xs-6.text-xs-right
-        = link_to 'Pay Remaining', pay_insurance_url, class: 'btn btn-success'
+        - if params[:id] == '2'
+          = link_to 'Pay Remaining', pay_insurance_url, class: 'btn btn-success'
+        - else
+          = link_to 'Claim', claim_insurance_url, class: 'btn btn-danger'

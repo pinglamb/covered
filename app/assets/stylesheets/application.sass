@@ -3,12 +3,17 @@
 @import "bootstrap-slider"
 @import "switchery"
 
-body.grey
-  background-color: #f0f0f0
+body
+  padding-top: 55px
+  &.grey
+    background-color: #f0f0f0
+
+a
+  &:hover, &:active
+    text-decoration: none
 
 .navbar
   text-align: center
-  position: relative
   .navbar-brand
     float: none
     padding-top: 5px
@@ -114,11 +119,11 @@ body.grey
   bottom: 15px
   .btn
     border-radius: 100px
-    width: 64px
-    height: 64px
+    width: 56px
+    height: 56px
     .fa
       font-size: 24px
-      margin-top: 12px
+      margin-top: 8px
 
 .item
   padding-left: $spacer

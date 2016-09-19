@@ -1,3 +1,5 @@
+- content_for :back_url, insurances_url(one_more: 1)
+
 .container
   .m-t-1
   .row
@@ -15,11 +17,11 @@
   small.text-muted Send a link to your friends so that they can turn their blessing to real action.
   br
   .text-xs-center.m-t-1
-    = link_to "whatsapp://send?text=#{root_url}", class: 'share'
+    = link_to "whatsapp://send?text=#{blessings_url}", class: 'share'
       i.fa.fa-fw.fa-whatsapp
-    = link_to "whatsapp://send?text=#{root_url}", class: 'share'
+    = link_to "whatsapp://send?text=#{blessings_url}", class: 'share'
       i.fa.fa-fw.fa-facebook
-    = link_to "whatsapp://send?text=#{root_url}", class: 'share'
+    = link_to "whatsapp://send?text=#{blessings_url}", class: 'share'
       i.fa.fa-fw.fa-twitter
-    = link_to root_url, class: 'share'
+    = link_to blessings_url, class: 'share'
       i.fa.fa-fw.fa-wechat

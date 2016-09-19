@@ -2,10 +2,21 @@
 
 .container
   .m-t-1
-  .card
+  - if params[:one_more].present?
+    = link_to insurance_url(2), class: 'card'
+      .card-block
+        h4.card-title.m-b-0 Travel Insurance
+        small.text-muted To San Francisco, from 28/9 to 9/10.
+  = link_to insurance_url(1), class: 'card'
     .card-block
-      h3.card-title Travel Insurance
-      small.text-muted Powered by AXA
+      h4.card-title.m-b-0 Travel Insurance
+      small.text-muted To New York, from 31/8 to 9/9.
+  = link_to insurance_url(1), class: 'card'
+    .card-block
+      .pull-right style="margin-top: 8px"
+        input.switch type="checkbox" checked="checked"
+      h4.card-title.m-b-0 Life Insurance
+      small.text-muted Coverage: $2,000,000
 
 .android-actions
   = link_to new_insurance_url, class: 'btn btn-primary'
