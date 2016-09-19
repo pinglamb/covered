@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap'
 gem 'font-awesome-rails'
 gem 'rails-assets-tether', source: 'https://rails-assets.org'
+gem 'rails-assets-switchery', source: 'https://rails-assets.org'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

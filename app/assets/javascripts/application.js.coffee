@@ -16,6 +16,7 @@
 #= require tether
 #= require bootstrap-sprockets
 #= require bootstrap-slider
+#= require switchery
 #= require cocoon
 #= require_self
 
@@ -30,3 +31,6 @@ $(document).on 'turbolinks:load', ->
     $(".apple-pay").animate({
       bottom: 0
     }, 'fast')
+
+  $(".switcher").each ->
+    new Switchery(this)
