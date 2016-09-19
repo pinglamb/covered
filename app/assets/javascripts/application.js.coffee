@@ -32,5 +32,13 @@ $(document).on 'turbolinks:load', ->
       bottom: 0
     }, 'fast')
 
+  if $(".insurance").length > 0
+    $(".insurance .policy").on 'change', (e) ->
+      sum = 0
+      $(".insurance .policy:checked").each ->
+        sum += Number($(this).data('amount'))
+      $(".total").text("$" + sum)
+
   $(".switch[data-switchery!=true]").each ->
     new Switchery(this)
+
