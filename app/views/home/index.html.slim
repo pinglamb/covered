@@ -1,0 +1,15 @@
+.hero.m-b-1
+  = image_tag 'sf.jpg', class: 'img-fluid'
+  .overlay
+  .content
+    .avatar = image_tag 'avatar.jpg', class: 'img-circle'
+    h1.m-b-1 Joey Tang is going to San Francisco.
+    .date
+      i.fa.fa-calendar
+      span 31 Sep to 8 Oct
+
+.container
+  p Bless Joey Tang with real support by funding her <strong>travel insurance</strong>.
+  .container.slider-input
+    input.slider data-slider-min="0" data-slider-max="50" data-slider-step="1" data-slider-value="20"
+  = link_to 'Bless You! Have a Safe Trip', '#', class: 'btn btn-lg btn-outline-primary btn-block'
