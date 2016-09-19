@@ -2,6 +2,9 @@
 @import "font-awesome"
 @import "bootstrap-slider"
 
+body.grey
+  background-color: #f0f0f0
+
 .hero
   position: relative
   > .overlay
@@ -84,3 +87,28 @@
     margin-top: 10px
   .total
     font-size: 18px
+
+.android-actions
+  position: fixed
+  right: 15px
+  bottom: 15px
+  .btn
+    border-radius: 100px
+    width: 64px
+    height: 64px
+    .fa
+      font-size: 24px
+      margin-top: 12px
+
+.item
+  padding-left: $spacer
+  padding-right: $spacer
+  color: #555
+  display: block
+  i.fa
+    font-size: 30px
+    margin-right: $spacer
+    vertical-align: middle
+  span
+    display: inline-block
+    margin-top: 2px
