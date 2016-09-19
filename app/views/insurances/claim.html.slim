@@ -1,1 +1,40 @@
 - content_for :back_url, insurance_url(1)
+- content_for :body_class, 'grey'
+
+.m-t-1
+
+.container
+  .row
+    .col-xs-8
+      .card.message
+        .card-block
+          | Dear valued customer, please attach your receipt of medical treatment.
+  .row
+    .col-xs-8
+    .col-xs-4
+      .card.message
+        = image_tag 'receipt.jpg', class: 'card-img'
+  .row
+    .col-xs-7
+    .col-xs-5
+      .card.message
+        .card-block Here you are!
+  .row
+    .col-xs-7
+      .card.message
+        .card-block
+          | Your medical claim is approved.
+  .row
+    .col-xs-7
+    .col-xs-5
+      .card.message
+        .card-block Thanks a lot!!
+
+.chat-actions
+  .row
+    .col-xs-9
+      input type="text" class="form-control"
+    .col-xs-3
+      .buttons
+        i.fa.fa-play
+        i.fa.fa-camera
