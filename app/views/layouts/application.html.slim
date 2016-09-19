@@ -16,7 +16,7 @@ html
   body class=content_for(:body_class)
     nav.navbar.navbar-dark.bg-warning.navbar-fixed-top
       .container
-        = link_to 'Covered', root_url, class: 'navbar-brand'
+        = link_to 'Covered', insurances_url(one_more: 1), class: 'navbar-brand'
       - if content_for?(:back_url)
         = link_to content_for(:back_url), class: 'back'
           i.fa.fa-angle-left
