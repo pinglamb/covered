@@ -32,5 +32,5 @@ $(document).on 'turbolinks:load', ->
       bottom: 0
     }, 'fast')
 
-  $(".switcher").each ->
+  $(".switch[data-switchery!=true]").each ->
     new Switchery(this)

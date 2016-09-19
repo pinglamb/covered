@@ -1,0 +1,25 @@
+.container
+  .m-t-1
+  .row
+    .col-xs-6
+      .text-muted Fee
+    .col-xs-6.text-xs-right
+      h2.m-b-0.total $260
+  .m-b-2
+  = link_to 'Pay Now', '#', class: 'btn btn-primary btn-block btn-lg'
+  .m-b-1
+  .text-muted.text-xs-center or
+  .m-b-1
+  | Ask for blessing from your friends :)
+  br
+  small.text-muted Send a link to your friends so that they can turn their blessing to real action.
+  br
+  .text-xs-center.m-t-1
+    = link_to "whatsapp://send?text=#{root_url}", class: 'share'
+      i.fa.fa-fw.fa-whatsapp
+    = link_to "whatsapp://send?text=#{root_url}", class: 'share'
+      i.fa.fa-fw.fa-facebook
+    = link_to "whatsapp://send?text=#{root_url}", class: 'share'
+      i.fa.fa-fw.fa-twitter
+    = link_to "whatsapp://send?text=#{root_url}", class: 'share'
+      i.fa.fa-fw.fa-wechat

@@ -10,4 +10,7 @@ class InsurancesController < ApplicationController
 
   def edit
   end
+
+  def pay
+  end
 end
