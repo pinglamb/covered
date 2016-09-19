@@ -12,4 +12,63 @@
   p Bless Joey Tang with real support by funding her <strong>travel insurance</strong>.
   .container.slider-input
     input.slider data-slider-min="0" data-slider-max="50" data-slider-step="1" data-slider-value="20"
-  = link_to 'Bless You! Have a Safe Trip', '#', class: 'btn btn-lg btn-outline-primary btn-block'
+  = link_to 'Bless You! Have a Safe Trip', '#', class: 'btn btn-lg btn-outline-primary btn-block btn-pay'
+
+.backdrop style="display: none"
+
+.apple-pay style="bottom: -350px"
+  .container.line
+    .row
+      .col-xs-6
+        i.fa.fa-apple
+        span Pay
+      .col-xs-6.text-xs-right
+        = link_to 'Cancel', '#'
+  hr
+  .container.line
+    .row
+      .col-xs-3
+        .text-muted CARD
+      .col-xs-7
+        strong
+          | CITIBANK
+          br
+          | (&bull;&bull;&bull;&bull; 6789)
+      .col-xs-2.text-xs-right
+        i.fa.fa-angle-right.right
+  hr
+  .container.line
+    .row
+      .col-xs-3
+        .text-muted CONTACT
+      .col-xs-7
+        strong
+          | LEIHO@ICLOUD.COM
+          br
+          | (408) 555-0941
+      .col-xs-2.text-xs-right
+        i.fa.fa-angle-right.right
+  hr
+  .container.line
+    .row
+      .col-xs-3
+        .text-muted &nbsp;
+      .col-xs-6
+        .text-muted Subtotal
+      .col-xs-3.text-xs-right
+        .amount $20.00
+    .m-b-1
+    .row
+      .col-xs-3
+        .text-muted &nbsp;
+      .col-xs-6
+        strong
+          | Total
+      .col-xs-3.text-xs-right
+        .total $20.00
+  hr
+  .container.line
+    .text-xs-center
+      = image_tag 'touch-id.png', width: 80
+      br
+      span Pay with Touch ID

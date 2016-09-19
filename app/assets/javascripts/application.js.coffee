@@ -23,3 +23,10 @@ $(document).on 'turbolinks:load', ->
   $("input.slider").slider
     tooltip: 'always'
     formatter: (val) -> "$" + val
+
+  $(".btn-pay").on 'click', (e) ->
+    e.preventDefault()
+    $(".backdrop").fadeIn('fast')
+    $(".apple-pay").animate({
+      bottom: 0
+    }, 'fast')
