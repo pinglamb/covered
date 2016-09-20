@@ -35,9 +35,10 @@ $(document).on 'turbolinks:load', ->
   $(".btn-touch").on 'click', (e) ->
     e.preventDefault()
     $(".backdrop").fadeOut('fast')
-    $(".apple-pay").animate({
+    $(".apple-pay").animate {
       bottom: -350
-    }, 'fast')
+    }, 'fast', ->
+      $(".apple-pay").hide()
     $(".btn-pay").hide()
     $(".thank").show()
 
